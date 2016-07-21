@@ -10,7 +10,7 @@ var methodOverride = require('method-override');
 //configuration
 
 //config files
-var dp = reqiore(./config/db);
+var dp = require("./config/db");
 
 //set our port
 var port = process.env.PORT || 8080;

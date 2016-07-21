@@ -1,2 +1,4 @@
 #better to download from the package json by yourself
 node_modules/
+#install with bower urself. or find all dependencies and add in
+public/libs/
