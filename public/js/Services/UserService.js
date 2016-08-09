@@ -3,12 +3,16 @@
 angular.module("UserService" []).factory("User", ['$https', function($http) {
 
     return {
-        get : function() {
-            return $https.get('./api/users');
+        get : function(userName) {
+            return $https.get('./api/users/'+userName);
         }, 
 
         create : function(userData) {
-            return $https.post('./api/users', userData);
+            return $https.put('./api/users', userData);
+        },
+
+        login : function(userPassword, userName) {
+            return $https.post('./api/users/'+userName, userPassword)
         },
 
         delete : function(id) {
